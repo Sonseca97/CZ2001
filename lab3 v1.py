@@ -77,8 +77,8 @@ def run(sizes):
         l = list(range(size))
         
         #ascending
-        l_ins = l
-        l_merge = l
+        l_ins = l.copy()
+        l_merge = l.copy()
         #insertion sort
         start = time.time()
         comp = insSort(l_ins)
@@ -102,8 +102,8 @@ def run(sizes):
         #----------------------------------------------------------------
         #descending
         l.sort(reverse=True)
-        l_ins = l
-        l_merge = l
+        l_ins = l.copy()
+        l_merge = l.copy()
         #insertion sort
         start = time.time()
         comp = insSort(l_ins)
@@ -124,8 +124,8 @@ def run(sizes):
         #--------------------------------------------------------
         #random shuffle the list
         random.shuffle(l)
-        l_ins = l
-        l_merge = l
+        l_ins = l.copy()
+        l_merge = l.copy()
         #insertion sort
         start = time.time()
         comp = insSort(l_ins)
