@@ -74,8 +74,8 @@ if __name__ == '__main__':
     'Bangkok': ['Singapore', 'Bali', 'Hanoi'],
     'Hanoi': ['Bali', 'Bangkok']
     }
-    depature = input("where is your depature city?")
-    arrival = input("where is your arrival city?")
+    departure = (input("where is your departure city?")).capitalize()
+    arrival = (input("where is your arrival city?")).capitalize()
     print(time.time())
-    print(bfs_shortest(flight_20, depature, arrival))
+    print(bfs_shortest(flight_20, departure, arrival))
     print(time.time())
