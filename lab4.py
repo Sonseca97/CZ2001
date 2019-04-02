@@ -24,7 +24,7 @@ if __name__ == '__main__':
     flight_10 = {
     'Amsterdam': ['Barcelona', 'London', 'Munich'],
     'Barcelona': ['Amsterdam', 'Istanbul', 'London'],
-    'Berlin': ['Geneva', 'Munich', 'Warsaw'],
+    'Berlin': ['Geneva', 'Munich', 'Warsaw','London'],
     'Geneva': ['Berlin', 'Vienna','Glasgow'],
     'Glasgow': ['Geneva', 'London'],
     'Munich': ['Amsterdam', 'Berlin'],
@@ -37,7 +37,7 @@ if __name__ == '__main__':
     flight_15 = {
     'Amsterdam': ['Barcelona', 'London', 'Munich', 'Groningen'],
     'Barcelona': ['Amsterdam', 'Istanbul', 'London'],
-    'Berlin': ['Geneva', 'Munich', 'Warsaw'],
+    'Berlin': ['Geneva', 'Munich', 'Warsaw','London'],
     'Geneva': ['Berlin', 'Vienna','Glasgow', 'Milan'],
     'Glasgow': ['Geneva', 'London','Zurich'],
     'Munich': ['Amsterdam', 'Berlin', 'Hamburg'],
@@ -55,7 +55,7 @@ if __name__ == '__main__':
     flight_20 = {
     'Amsterdam': ['Barcelona', 'London', 'Munich', 'Groningen', 'Beijing'],
     'Barcelona': ['Amsterdam', 'Istanbul', 'London'],
-    'Berlin': ['Geneva', 'Munich', 'Warsaw'],
+    'Berlin': ['Geneva', 'Munich', 'Warsaw','London'],
     'Geneva': ['Berlin', 'Vienna','Glasgow', 'Milan'],
     'Glasgow': ['Geneva', 'London','Zurich'],
     'Munich': ['Amsterdam', 'Berlin', 'Hamburg'],
