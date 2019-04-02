@@ -80,7 +80,7 @@ if __name__ == '__main__':
     #print(bfs_shortest(flight_20, departure, arrival))
     #print(time.time())
     
-     if (departure and arrival in flight_10) == True :
+    if (departure and arrival in flight_10) == True :
         print('You can take flight_10 and the shortest path is as follows:')
         print(bfs_shortest(flight_10, departure, arrival))
         print('flight_10 Running Time:',time.time())   
