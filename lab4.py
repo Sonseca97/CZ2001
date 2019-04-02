@@ -16,6 +16,7 @@ def bfs_shortest(graph, start, destination):
                 if(neighbour == destination):
                     return new_path
             visited.append(vertex)
+    return "No such route"
 
 
 if __name__ == '__main__':
@@ -24,55 +25,57 @@ if __name__ == '__main__':
     'Amsterdam': ['Barcelona', 'London', 'Munich'],
     'Barcelona': ['Amsterdam', 'Istanbul', 'London'],
     'Berlin': ['Geneva', 'Munich', 'Warsaw'],
-    'Geneva': ['Berlin', 'Vienna'],
-    'Glasgow': ['Groningen', 'London'],
-    'Groningen': ['Glasgow', 'London', 'Zurich'],
-    'Hamburg': ['Munich', 'Warsaw'],
-    'Munich': ['Hamburg', 'Amsterdam', 'Berlin'],
-    'Istanbul': ['Barcelona', 'London', 'Warsaw'],
-    'London': ['Amsterdam', 'Barcelona', 'Berlin', 'Glasgow', 'Groningen'],
+    'Geneva': ['Berlin', 'Vienna','Glasgow'],
+    'Glasgow': ['Geneva', 'London'],
+    'Munich': ['Amsterdam', 'Berlin'],
+    'Istanbul': ['Barcelona'],
+    'London': ['Amsterdam', 'Barcelona', 'Berlin', 'Glasgow'],
+    'Warsaw': ['Berlin'],
+    'Vienna': ['Geneva'],
     }
 
     flight_15 = {
-    'Amsterdam': ['Barcelona', 'London', 'Munich', 'Paris'],
-    'Barcelona': ['Amsterdam', 'Istanbul', 'London', 'Paris'],
+    'Amsterdam': ['Barcelona', 'London', 'Munich', 'Groningen'],
+    'Barcelona': ['Amsterdam', 'Istanbul', 'London'],
     'Berlin': ['Geneva', 'Munich', 'Warsaw'],
-    'Geneva': ['Berlin', 'Vienna'],
-    'Glasgow': ['Groningen', 'London'],
-    'Groningen': ['Glasgow', 'London', 'Zurich'],
-    'Hamburg': ['Munich', 'Warsaw'],
-    'Helsinki': ['Zurich'],
-    'Istanbul': ['Barcelona', 'London', 'Paris', 'Warsaw'],
-    'London': ['Amsterdam', 'Barcelona', 'Berlin', 'Glasgow', 'Groningen'],
-    'Munich': ['Amsterdam', 'Berlin', 'Hamburg', 'Vienna'],
-    'Paris': ['Amsterdam', 'Barcelona', 'Istanbul'],
-    'Vienna': ['Geneva', 'Munich'],
-    'Warsaw': ['Berlin', 'Hamburg', 'Istanbul'],
-    'Zurich': ['Groningen','Helsinki']
+    'Geneva': ['Berlin', 'Vienna','Glasgow', 'Milan'],
+    'Glasgow': ['Geneva', 'London','Zurich'],
+    'Munich': ['Amsterdam', 'Berlin', 'Hamburg'],
+    'Istanbul': ['Barcelona'],
+    'London': ['Amsterdam', 'Barcelona', 'Berlin', 'Glasgow'],
+    'Warsaw': ['Berlin', 'Prague'],
+    'Vienna': ['Geneva', 'Prague'],
+    'Groningen': ['Amsterdam','Hamburg'],
+    'Hamburg': ['Groningen', 'Munich'],
+    'Zurich': ['Glasgow', 'Milan'],
+    'Milan': ['Geneva', 'Zurich'],
+    'Prague': ['Warsaw', 'Vienna']
     }
 
     flight_20 = {
-    'Amsterdam': ['Barcelona', 'London', 'Munich', 'Paris', 'Prague'],
-    'Barcelona': ['Amsterdam', 'Istanbul', 'London', 'Paris'],
+    'Amsterdam': ['Barcelona', 'London', 'Munich', 'Groningen', 'Beijing'],
+    'Barcelona': ['Amsterdam', 'Istanbul', 'London'],
     'Berlin': ['Geneva', 'Munich', 'Warsaw'],
-    'Beijing': ['Milan'],
-    'Geneva': ['Berlin', 'Vienna'],
-    'Glasgow': ['Groningen', 'London'],
-    'Groningen': ['Glasgow', 'London', 'Zurich'],
-    'Hamburg': ['Munich', 'Warsaw'],
-    'Helsinki': ['Zurich'],
-    'Istanbul': ['Barcelona', 'London', 'Paris', 'Warsaw'],
-    'London': ['Amsterdam', 'Barcelona', 'Berlin', 'Glasgow', 'Groningen', 'Stockholm'],
-    'Milan': ['Beijing', 'Paris'],
-    'Munich': ['Amsterdam', 'Berlin', 'Hamburg', 'Vienna'],
-    'Madrid': ['Paris', 'Zurich'],
-    'Paris': ['Amsterdam', 'Barcelona', 'Madrid', 'Milan','Istanbul', 'Stockholm'],
-    'Prague': ['Amsterdam', 'Vienna'],
-    'Stockholm': ['London', 'Paris'],
-    'Vienna': ['Geneva', 'Munich', 'Prague'],
-    'Warsaw': ['Berlin', 'Hamburg', 'Istanbul'],
-    'Zurich': ['Groningen','Helsinki','Madrid'],
+    'Geneva': ['Berlin', 'Vienna','Glasgow', 'Milan'],
+    'Glasgow': ['Geneva', 'London','Zurich'],
+    'Munich': ['Amsterdam', 'Berlin', 'Hamburg'],
+    'Istanbul': ['Barcelona'],
+    'London': ['Amsterdam', 'Barcelona', 'Berlin', 'Glasgow','Singapore'],
+    'Warsaw': ['Berlin', 'Prague'],
+    'Vienna': ['Geneva', 'Prague'],
+    'Groningen': ['Amsterdam','Hamburg'],
+    'Hamburg': ['Groningen', 'Munich'],
+    'Zurich': ['Glasgow', 'Milan'],
+    'Milan': ['Geneva', 'Zurich'],
+    'Prague': ['Warsaw', 'Vienna'],
+    'Singapore': ['London', 'Bali', 'Bangkok', 'Beijing'],
+    'Beijing': ['Amsterdam', 'Singapore'],
+    'Bali': ['Singapore', 'Hanoi', 'Bangkok'],
+    'Bangkok': ['Singapore', 'Bali', 'Hanoi'],
+    'Hanoi': ['Bali', 'Bangkok']
     }
+    depature = input("where is your depature city?")
+    arrival = input("where is your arrival city?")
     print(time.time())
-    print(bfs_shortest(flight_20, 'Amsterdam', 'Helsinki'))
+    print(bfs_shortest(flight_20, depature, arrival))
     print(time.time())
