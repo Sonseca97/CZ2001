@@ -76,6 +76,15 @@ if __name__ == '__main__':
     }
     departure = (input("where is your departure city?")).capitalize()
     arrival = (input("where is your arrival city?")).capitalize()
+    #print(time.time())
+    #print(bfs_shortest(flight_20, departure, arrival))
+    #print(time.time())
+    
+    print(bfs_shortest(flight_10, departure, arrival)) #we should check all three flights isnt it to compare the running time
+    print(time.time())                                 #since we need to analyze how the running times depend on the numbers of cities and nonstop flights.
+    
+    print(bfs_shortest(flight_15, departure, arrival))
     print(time.time())
+    
     print(bfs_shortest(flight_20, departure, arrival))
     print(time.time())
