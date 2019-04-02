@@ -80,11 +80,28 @@ if __name__ == '__main__':
     #print(bfs_shortest(flight_20, departure, arrival))
     #print(time.time())
     
-    print(bfs_shortest(flight_10, departure, arrival)) #we should check all three flights isnt it to compare the running time
-    print(time.time())                                 #since we need to analyze how the running times depend on the numbers of cities and nonstop flights.
+     if (departure and arrival in flight_10) == True :
+        print('You can take flight_10 and the shortest path is as follows:')
+        print(bfs_shortest(flight_10, departure, arrival))
+        print('flight_10 Running Time:',time.time())   
+    else:
+        print('No route in flight_10')
+        
+        
+    if (departure and arrival in flight_15) == True :
+        print('\n')
+        print('You can take flight_15 and the shortest path is as follows:')
+        print(bfs_shortest(flight_15, departure, arrival))
+        print('flight_15 Running Time:', time.time())   
+    else:
+        print('No route in flight_15')
+        
     
-    print(bfs_shortest(flight_15, departure, arrival))
-    print(time.time())
+    if (departure and arrival in flight_20) == True :
+        print('\n')
+        print('You can take flight_20 and the shortest path is as follows:')
+        print(bfs_shortest(flight_20, departure, arrival))
+        print('Flight_20 Running Time',time.time())
+    else:
+        print('No route in flight_20')
     
-    print(bfs_shortest(flight_20, departure, arrival))
-    print(time.time())
